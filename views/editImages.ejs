@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Image</title>
+    <style>
+        .image-preview {
+            max-width: 100%; 
+            max-height: 300px; 
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Edit Image</h1>
+    <img src="<%= item.url %>" alt="Image Preview" class="image-preview">
+    <form action="/update-image/<%= index %>" method="post">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="<%= item.name %>" required>
+        </div>
+        <div>
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" value="<%= item.description %>" required>
+        </div>
+    
+        <button type="submit">Update Image</button>
+    </form>
+</body>
+</html>

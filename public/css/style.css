@@ -1,0 +1,14 @@
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center images horizontally */
+    gap: 16px; /* Spacing between images */
+    padding: 20px;
+}
+
+.image-container img {
+    max-width: 100%; /* Make image width not exceed the container */
+    max-height: 300px; /* Set a maximum height for the images */
+    height: auto; /* Ensure the height is auto-adjusted to maintain aspect ratio */
+    border-radius: 8px; /* Optional: adds rounded corners to the images */
+}
